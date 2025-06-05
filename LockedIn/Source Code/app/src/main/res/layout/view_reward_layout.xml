@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/reward_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congratulations!"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/reward_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have unlocked:"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:textColor="#4B5356"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/rewardname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/claim_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Claim"
+            android:layout_marginTop="16dp"
+            android:padding="5dp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/reward_animation"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/confetti"
+        app:lottie_repeatCount="10" />
+
+</FrameLayout>

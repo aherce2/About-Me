@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="PreferenceCardView">
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="exampleColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+        <attr name="startTime" format="string" />
+        <attr name="endTime" format="string" />
+    </declare-styleable>
+</resources>

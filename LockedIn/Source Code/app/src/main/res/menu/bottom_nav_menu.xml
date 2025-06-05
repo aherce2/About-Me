@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:title="Calendar"
+        android:id = "@+id/calendar"
+        android:icon="@drawable/baseline_calendar_month_24"
+        tools:ignore="HardcodedText" />
+    <item
+        android:title="Home"
+        android:id = "@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        tools:ignore="HardcodedText" />
+    <item
+        android:title="Rewards"
+        android:id = "@+id/rewards"
+        android:icon="@drawable/treasure_icon"
+        tools:ignore="HardcodedText" />
+
+</menu>

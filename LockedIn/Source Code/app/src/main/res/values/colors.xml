@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    https://www.schemecolor.com/pastel-blue-monochromatic.php-->
+<resources>
+
+    <color name="primary">#27435C</color>
+    <color name="primary_variant">#27435C</color>
+    <color name="secondary">#3A5C7E</color>
+    <color name="secondary_variant">#3A5C7E</color>
+    <color name="on_secondary">#FFFFFF</color>
+
+
+    <color name="colorInactive">#8A8A8A</color>
+    <color name="colorActive">#FF4081</color>
+
+    <!-- Background and Surface Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#27435C</color>
+    <color name="text_secondary">#3A5C7E</color>
+    <color name="text_tertiary">#87BBCA</color>
+
+    <!-- UI Element Colors -->
+    <color name="button_background">#27435C</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="title_text">#27435C</color>
+    <color name="subtitle_text">#3A5C7E</color>
+    <color name="divider">#27435C</color>
+    <color name="icon_active">#27435C</color>
+    <color name="icon_inactive">#3A5C7E</color>
+
+    <!-- Accent Colors -->
+    <color name="accent">#87BBCA</color>
+    <color name="accent_light">#B3D4DE</color>
+
+    <!-- Status Colors -->
+    <color name="error">#B00020</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFA000</color>
+
+    <!-- On Colors -->
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_background">#27435C</color>
+    <color name="on_surface">#27435C</color>
+    <color name="on_error">#FFFFFF</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="teal">#009688</color>
+
+<!--    colors for tags-->
+    <color name="tag_cs465">#32213A</color>
+    <color name="tag_cs374">#383B53</color>
+    <color name="tag_cs461">#66717E</color>
+    <color name="tag_ece445">#D4D6B9</color>
+    <color name="tag_ece408">#D1CAA1</color>
+
+</resources>

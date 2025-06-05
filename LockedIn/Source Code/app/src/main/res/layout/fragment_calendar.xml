@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/previousWeekButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@color/primary"
+            android:background="@android:color/transparent"
+            android:contentDescription="Previous Week"/>
+
+        <TextView
+            android:id="@+id/monthYearTV"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="December 2024"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="@color/primary"/>
+
+        <ImageButton
+            android:id="@+id/nextWeekButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/primary"
+            android:src="@drawable/baseline_arrow_forward_24"
+            android:background="@android:color/transparent"
+            android:contentDescription="Next Week"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weekdayContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Weekday columns will be added programmatically -->
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/eventListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"/>
+    <!--https://www.youtube.com/watch?v=knpSbtbPz3o source code for layout and fragment-->
+</LinearLayout>

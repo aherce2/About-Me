@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LockedIn" parent="Base.Theme.LockedIn">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+    </style>
+
+    <style name="Theme.Dialog.Transparent" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="NavigationDrawerText" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:itemBackground">?attr/colorPrimary</item>
+    </style>
+    <style name="App.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/secondary</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="behavior_peekHeight">0dp</item>
+        <item name="behavior_fitToContents">true</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="behavior_peekHeight">0dp</item>
+        <item name="behavior_fitToContents">true</item>
+    </style>
+
+    <style name="CustomBottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/TextAppearance.Material3.LabelSmall</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.Material3.LabelSmall</item>
+        <item name="itemMinHeight">48dp</item>
+        <item name="android:itemBackground">?attr/colorPrimary</item>
+    </style>
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+</resources>
