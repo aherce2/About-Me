@@ -1,0 +1,250 @@
+.restaurants-container {
+  padding-top: 10rem; /* Space between the navbar and the card */
+  padding-bottom: 2rem; /* Optional: Space at the bottom */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 2rem; /* Space between the rows of cards */
+}
+
+.restaurants-card-custom {
+    margin: 1rem; /* Space between cards */
+    display: flex;
+    flex-wrap: auto;
+    flex-direction: column; /* Stacks header and body vertically */
+    overflow: hidden; /* Hide overflow within the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    border-radius: 8px; /* Optional: rounded corners */
+    overflow: visible;
+  }
+  
+
+  .restaurants-card-custom.highlighted {
+    border: 2px solid var(--primary-color); /* Change this to your desired highlight color */
+    box-shadow: 0 4px 8px var(--primary-color); /* Optional: Enhance shadow for highlighted effect */
+}
+  .restaurants-card-custom.clickable {
+    cursor: pointer; /* Show pointer cursor for clickable state */
+  }
+  .restaurants-card-custom.clickable:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+  cursor: pointer;
+  }
+
+  .restaurants-card-custom {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer; /* Show pointer cursor by default */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+
+
+
+.restaurant-card-header {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the far left and far right */
+  align-items: center; /* Centers items vertically */
+  padding: 1rem; /* Padding inside the header */
+  background-color: var(--primary-color); /* Optional: background color for header */
+}
+
+.restaurant-info {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the far left and far right */
+  width: 100%; /* Ensures the flex container takes the full width of the header */
+}
+
+.restaurant-name {
+  font-weight: bold;
+  color: white;
+  font-family: var(--font-family);
+  text-align:center;
+}
+
+.restaurant-id{
+  color: var(--text-color);
+  font-family: var(--font-family);
+  text-align:left;
+  font-size: 0.96rem;
+}
+.card-body {
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+  padding: 1rem; /* Padding inside the card body */
+  height: 100%; /* Ensure the body takes the full height available */
+  box-sizing: border-box; /* Include padding in height calculation */
+  flex: 1; /* Allows the body to expand and take available space */
+  font-family: var(--font-family);
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the left and right */
+  padding: 0.5rem 0; /* Padding for each item */
+  border-bottom: 1px solid #ddd; /* Optional: divider line between items */
+}
+
+.restaurant-attributes-name {
+  flex: 21; /* Take up more space for the name */
+  text-align: left;
+  font-size: 0.95rem;
+  
+}
+
+.restaurant-details {
+  flex-grow: 1;
+  flex: 1; /* Fixed space for each attribute */
+  text-align: right;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+}
+
+.message-title {
+  margin-bottom: 5px;
+  text-align: center;
+  color: var(--secondary-color);
+}
+/* Style for individual buttons */
+/* Add styles for the new button */
+.message-button {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.message-button .btn-show-default {
+  background-color: var(--primary-color); /* Set your secondary button color */
+  color: #fff; /* Set text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size if needed */
+}
+
+.message-button .btn-show-default:hover {
+  background-color: var(--primary-color); /* Color on hover */
+}
+
+.message-button .btn-show-default:active {
+  background-color: rgba(255, 95, 5, 0.65); /* Color when active */
+}
+
+.message-button .btn-show-default:focus {
+  outline: none; /* Remove default outline */
+  background-color: var(--primary-color); /* Maintain original color on focus */
+}
+
+.message-button {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.message-dropdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust based on your layout */
+  margin-bottom: 20px;
+}
+.message-container {
+  margin-left: 20px; /* Space between message and dropdown */
+}
+.message-button .btn-show-default {
+  background-color: var(--primary-color); /* Set your secondary button color */
+  color: #fff; /* Set text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size if needed */
+}
+
+.message-button .btn-show-default:hover {
+  background-color: var(--primary-color); /* Color on hover */
+}
+
+.message-button .btn-show-default:active {
+  background-color: rgba(255, 95, 5, 0.65); /* Color when active */
+}
+
+.message-button .btn-show-default:focus {
+  outline: none; /* Remove default outline */
+  background-color: var(--primary-color); /* Maintain original color on focus */
+}
+
+.clear-search-button {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.clear-search-button .btn-clear-search {
+  background-color: var(--primary-color); /* Set your secondary button color */
+  color: #fff; /* Set text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size if needed */
+}
+
+.clear-search-button .btn-clear-search:hover {
+  background-color: var(--primary-color); /* Color on hover */
+}
+
+.clear-search-button .btn-clear-search:active {
+  background-color: rgba(255, 95, 5, 0.65); /* Color when active */
+}
+
+.clear-search-button .btn-clear-search:focus {
+  outline: none; /* Remove default outline */
+  background-color: var(--primary-color); /* Maintain original color on focus */
+}
+
+.clear-search-button {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.clear-search-button .btn-clear-search {
+  background-color: var(--primary-color); /* Set your secondary button color */
+  color: #fff; /* Set text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size if needed */
+}
+
+.clear-search-button .btn-clear-search:hover {
+  background-color: var(--primary-color); /* Color on hover */
+}
+
+.clear-search-button .btn-clear-search:active {
+  background-color: rgba(255, 95, 5, 0.65); /* Color when active */
+}
+
+.clear-search-button .btn-clear-search:focus {
+  outline: none; /* Remove default outline */
+  background-color: var(--primary-color); /* Maintain original color on focus */
+}
+.dropdown-wrapper {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Align content vertically */
+  gap: 16px; /* Add space between elements */
+  margin-bottom: 20px; /* Add margin below the wrapper to separate from cards */
+  
+}
+.dropdown-container {
+  display: inline-block; /* Keep inline to allow dynamic width */
+  
+}

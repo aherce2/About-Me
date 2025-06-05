@@ -1,0 +1,154 @@
+.orders-container {
+  padding-top: 10rem; /* Space between the navbar and the card */
+  padding-bottom: 2rem; /* Optional: Space at the bottom */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  align-items: center; /* Center cards horizontally */
+}
+
+.card-custom {
+  width: 60rem; /* Width of the card */
+  margin: 1rem 0; /* Space between cards */
+  display: flex;
+  flex-direction: column; /* Stacks header and body vertically */
+  overflow: hidden; /* Hide overflow within the card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the far left and far right */
+  align-items: center; /* Centers items vertically */
+  padding: 1rem; /* Padding inside the header */
+  background-color: var(--primary-color); /* Optional: background color for header */
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the far left and far right */
+  width: 100%; /* Ensures the flex container takes the full width of the header */
+}
+
+.order-id,
+.restaurant-name {
+  font-weight: bold;
+  color: white;
+  font-family: var(--font-family);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+  padding: 1rem; /* Padding inside the card body */
+  height: 100%; /* Ensure the body takes the full height available */
+  box-sizing: border-box; /* Include padding in height calculation */
+  flex: 1; /* Allows the body to expand and take available space */
+  font-family: var(--font-family);
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the left and right */
+  padding: 0.5rem 0; /* Padding for each item */
+  border-bottom: 1px solid #ddd; /* Optional: divider line between items */
+}
+
+.menu-item-name {
+  flex: 2; /* Take up more space for the name */
+  text-align: left;
+}
+
+.quantity {
+  flex: 1; /* Fixed space for quantity */
+  text-align: center;
+}
+
+.price {
+  flex: 1; /* Fixed space for price */
+  text-align: right;
+  font-family: var(--font-family);
+}
+
+.total-price-container {
+  display: flex;
+  justify-content: space-between; /* Align total price and links */
+  align-items: center; /* Vertically center the content */
+  margin-top: 1rem; /* Space above the total price section */
+  text-align: left;
+}
+.total-price {
+  flex: 1; /* Allow the total price section to expand */
+  margin-right: 1rem; /* Space between total price and links */
+  font-family: var(--font-family);
+}
+.total-price-label {
+  color: var(--secondary-color); /* Replace this with your desired color */
+}
+.links-container {
+  display: flex;
+  justify-content: flex-end; /* Align links to the bottom-right of the card body */
+  flex: 1; /* Allow the links section to expand */
+}
+
+.orders-card-link {
+  margin-left: 1rem; /* Space between links */
+  text-decoration: none;
+  color: var(--secondary-color); /* Link color */
+}
+
+.orders-card-link:hover {
+  text-decoration: underline; /* Hover effect for links */
+  color: var(--primary-color);
+}
+.quantity-input {
+  width: 50px;
+  margin-left: 10px;
+  text-align: center;
+  display: inline-block;
+}
+.deleted-item {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+}
+.undo-delete:hover {
+  color: var(--primary-color); /* Darker green on hover */
+}
+
+.card-custom.order-placed {
+  opacity: 0.5; /* Make the card semi-transparent */
+  pointer-events: none; /* Disable all interactions */
+}
+
+.card-custom.order-placed .orders-card-link {
+  pointer-events: none; /* Disable individual links */
+  color: #999; /* Change the link color to indicate disabled state */
+}
+.custom-alert {
+  background-color: #f8f9fa; /* Match your background color */
+  color: #212529; /* Match your text color */
+  border: 1px solid #ced4da; /* Match your border color */
+  border-radius: 0.25rem; /* Match your border radius */
+  padding: 1rem; /* Match your padding */
+  font-family: Arial, sans-serif; /* Match your font family */
+  font-size: 1rem; /* Match your font size */
+}
+/* Style for the card when an order is placed */
+.card-custom.order-placed {
+  opacity: 0.5; /* Make the card semi-transparent */
+  pointer-events: none; /* Disable interaction with the card */
+  background-color: #f8f9fa; /* Background color to indicate it's placed */
+  /* Optional: Adjust other styles as needed */
+}
+
+/* Custom alert style */
+.custom-alert {
+  font-family: Arial, sans-serif; /* Font family to match other elements */
+  background-color: #d4edda; /* Background color for the success alert */
+  color: #155724; /* Text color for the success alert */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #c3e6cb; /* Border color for the success alert */
+}

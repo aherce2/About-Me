@@ -1,0 +1,177 @@
+DROP PROCEDURE
+  `dine_dash`.`GetLeastPopularMenuItems`;
+
+
+CREATE PROCEDURE GetLeastPopularMenuItems()
+BEGIN
+    SELECT 
+        mi.MenuID,
+        mi.Name AS menuName,
+        SUM(oi.Quantity) AS totalSold
+    FROM 
+        menuitems mi
+    JOIN 
+        orderitems oi ON mi.MenuID = oi.MenuID
+    JOIN 
+        orders o ON oi.OrderID = o.OrderID
+    JOIN 
+        restaurants r ON mi.RestaurantID = r.RestaurantID
+    GROUP BY 
+        mi.MenuID, mi.Name
+    ORDER BY 
+        totalSold ASC;
+END
+
+DROP PROCEDURE
+  `dine_dash`.`GetTop50RatedRestaurants`;
+CREATE PROCEDURE dine_dash.GetTop50RatedRestaurants()
+BEGIN
+    SELECT 
+        r.RestaurantID,
+        r.Name as RestaurantName,
+        r.Category,
+        r.Zipcode,
+        r.PriceRange,
+        r.Name AS restaurantName,
+        rt.ratings,
+        AVG(rt.Score) AS averageRating
+    FROM 
+        restaurants r
+    JOIN 
+        ratings rt ON r.RestaurantID = rt.RestaurantID
+    GROUP BY 
+        r.RestaurantID, r.Name
+    ORDER BY 
+        averageRating DESC
+    LIMIT 50;
+END;
+
+DROP PROCEDURE
+  `dine_dash`.`GetRestaurantsAboveAverageRatingOverall`;
+CREATE PROCEDURE GetRestaurantsAboveAverageRatingOverall()
+BEGIN
+    SELECT 
+        r.restaurantId,
+        r.name AS restaurantName,
+        AVG(rv.ratings) AS averageRating
+    FROM 
+        restaurants r
+    JOIN 
+        ratings rv ON r.restaurantId = rv.restaurantId
+    GROUP BY 
+        r.restaurantId, r.name
+    HAVING 
+        averageRating > (
+            SELECT 
+                AVG(ratings)
+            FROM 
+                ratings
+        )
+    ORDER BY 
+        averageRating DESC;
+END
+
+DROP PROCEDURE
+  `dine_dash`.`GetMostExpensiveMenuItems`;
+CREATE PROCEDURE GetMostExpensiveMenuItems()
+BEGIN
+    SELECT 
+        mi.MenuID,
+        mi.Name AS menuName,
+        mi.Price
+    FROM 
+        menuitems mi
+    WHERE 
+        mi.Price = (SELECT MAX(Price) FROM menuitems);
+END;
+DROP PROCEDURE
+  `dine_dash`.`GetLeastExpensiveItems`;
+CREATE PROCEDURE GetLeastExpensiveItems()
+BEGIN
+    -- Find the minimum price among all menu items
+    SELECT 
+        mi.MenuID,
+        mi.Name AS MenuName,
+        mi.Price
+    FROM 
+        menuitems mi
+    WHERE 
+        mi.Price = (SELECT MIN(Price) FROM menuitems);
+END;
+
+DROP PROCEDURE
+  `dine_dash`.`GetRestaurantsAboveAverageRating`;
+
+CREATE PROCEDURE GetRestaurantsAboveAverageRating(IN userZip VARCHAR(10))
+BEGIN
+    -- Find the average rating of all restaurants in the specified zip code
+    SET @OverallAverageRating = (
+        SELECT 
+            AVG(rt_inner.Score)
+        FROM 
+            restaurants r_inner
+        JOIN 
+            ratings rt_inner ON r_inner.RestaurantID = rt_inner.RestaurantID
+        WHERE 
+            r_inner.ZipCode = userZip
+    );
+
+    -- Retrieve restaurants with average ratings above the overall average rating
+    SELECT 
+        r.RestaurantID AS restaurantId,
+        r.Name AS restaurantName,
+        AVG(rt.Score) AS averageRating
+    FROM 
+        restaurants r
+    JOIN 
+        ratings rt ON r.RestaurantID = rt.RestaurantID
+    WHERE 
+        r.ZipCode = userZip
+    GROUP BY 
+        r.RestaurantID, r.Name
+    HAVING 
+        AVG(rt.Score) > @OverallAverageRating;
+END;
+
+DROP PROCEDURE
+  `dine_dash`.`GetMostPopularMenuItem`;
+CREATE PROCEDURE GetMostPopularMenuItem()
+BEGIN
+    SELECT 
+        mi.MenuID,
+        mi.Name AS MenuName,
+        mi.Price, 
+        SUM(oi.Quantity) AS TotalSold,
+        r.Name AS RestaurantName
+    FROM 
+        menuitems mi
+    JOIN 
+        orderitems oi ON mi.MenuID = oi.MenuID
+    JOIN 
+        orders o ON oi.OrderID = o.OrderID
+    JOIN 
+        restaurants r ON mi.RestaurantID = r.RestaurantID
+
+    GROUP BY 
+        mi.MenuID, mi.Name, r.Name
+    ORDER BY 
+        totalSold DESC;
+END
+
+CREATE PROCEDURE GetDataByID(IN idx INT, IN userZip VARCHAR(10))
+BEGIN
+    CASE idx
+        -- Calls procedures requiring userZip
+        WHEN 0 THEN CALL GetPopularRestandItems();
+        WHEN 1 THEN CALL GetMostPopularMenuItem();
+        WHEN 2 THEN CALL GetTop50RatedRestaurants();
+        WHEN 3 THEN CALL GetRestaurantsAboveAverageRatingOverall();
+        WHEN 4 THEN CALL GetRestaurantsAboveAverageRating(userZip);
+        WHEN 5 THEN CALL GetLeastExpensiveItems();
+        WHEN 6 THEN CALL GetLeastPopularMenuItems();
+        WHEN 7 THEN CALL GetMostExpensiveMenuItems();
+
+        -- Handle invalid index
+        ELSE SELECT 'Invalid query index';
+    END CASE;
+END;

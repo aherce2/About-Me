@@ -1,0 +1,144 @@
+.navbar {
+    background-color: var(--primary-color); /* Background color */
+    color: white; /* Text color for all elements inside */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    padding: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-family: var(--font-family);
+  }
+
+  /* Container for the navbar content */
+  .navbar-container {
+    width: 100%;
+    max-width: 1200px; /* Max width for central content */
+    display: flex;
+    justify-content: space-between; /* Space between brand and other elements */
+    align-items: center;
+  }
+  
+  /* Style for Navbar.Brand */
+  .navbar .navbar-brand {
+    color: white; /* Text color */
+    font-size: 1.8rem; /* Font size for brand text */
+  }
+  
+  /* Style for Navbar.Toggle */
+  .navbar .navbar-toggler {
+    color: white; /* Text color */
+  }
+  
+  /* Style for nav links */
+  .navbar .nav-link {
+    color: white !important; /* Text color for links */
+    font-size: 1.2rem; /* Font size for links */
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+  
+  /* Hover state for nav links */
+  .navbar .nav-link:hover {
+    color: var(--secondary-color) !important; /* Change color on hover */
+  }
+  
+
+
+  /* Style for nav Logout */
+  .navbar .nav-link-logout {
+    color: white !important; /* Text color for links */
+    font-size: 0.9rem; /* Font size for links */
+    justify-content: end !important;
+    
+
+  }
+  
+  /* Hover state for nav links */
+  .navbar .nav-link-logout:hover {
+    color: var(--secondary-color) !important; /* Change color on hover */
+  }
+
+  /* Style for the search button */
+.navbar .btn-outline {
+    border-color: var(--secondary-color); /* Border color */
+    color: white; /* Text color */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Hover state for the search button */
+  .navbar .btn-outline:hover {
+    background-color: var(--secondary-color); /* Background color on hover */
+    color: white; /* Text color on hover */
+    border-color: var(--secondary-color); /* Border color on hover */
+  }
+  
+  /* Active state for the search button */
+  .navbar .btn-outline:active {
+    background-color: var(--secondary-color); /* Background color on click */
+    color: white; /* Text color on click */
+    border-color: var(--secondary-color); /* Border color on click */
+  }
+
+  .user-info {
+    position: fixed; /* Fixed position to place it relative to the viewport */
+    left: 10px; /* Adjust as needed for margin from the right edge */
+    top: 100px; /* Adjust as needed for margin from the bottom edge */
+    background-color: var(--primary-color); /* Background color for visibility */
+    border: 1px solid #ddd; /* Border for definition */
+    border-radius: 4px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for better visual appearance */
+    z-index: 1000; /* Ensure it’s on top of other elements */
+    font-size: 15px; /* Adjust font size if needed */
+  }
+  
+  .user-info-text {
+    margin: 0;
+    color: white;
+  }
+
+  /* Style for the fixed position button */
+.bottom-right {
+  position: fixed;
+  bottom: 20px; /* Adjust distance from the bottom */
+  right: 20px; /* Adjust distance from the right */
+}
+
+.delete-button {
+  background-color: var(--primary-color); /* Red color for delete action */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding for better appearance */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.delete-button:hover {
+  background-color: #8B0000; /* Darker red on hover */
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Lighter background with opacity */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  padding-top: 20%; /* Position text higher up */
+  z-index: 9999;
+}
+
+.loading-text {
+  font-size: 1.5rem; /* Font size */
+  color: #000000; /* Dark text color for contrast */
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Dark shadow for better visibility */
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background behind text */
+  padding: 10px; /* Padding around text */
+  border-radius: 5px; /* Rounded corners */
+}

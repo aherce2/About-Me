@@ -1,0 +1,190 @@
+/* Filters styles */
+.filter-dropdown {
+  font-family: var(--font-family);
+  font-size: 1rem; /* Font size */
+}
+
+.filter-dropdown .dropdown-toggle {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--background-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  font-size: 1rem; /* Font size */
+}
+
+.filter-dropdown .dropdown-toggle:hover,
+.filter-dropdown .dropdown-toggle:focus {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+
+.filter-dropdown .dropdown-menu {
+  background-color: var(--background-color);
+}
+
+.filter-dropdown .list-group-item {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+}
+
+.filter-dropdown .list-group-item.active {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border-color: var(--secondary-color);
+}
+
+.filter-dropdown .dropdown-item {
+  color: var(--text-color);
+}
+
+.filter-dropdown .dropdown-item:hover {
+  background-color: transparent;
+  color: var(--background-color);
+}
+
+.filter-dropdown .filters-btn {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  /*add spacing between buttons*/
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-dropdown .filters-btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Filters */
+.filter-container {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap; /* Allow checkboxes to wrap if necessary */
+  padding: 0.5rem 0;
+  gap: 1rem; /* Space between checkboxes */
+}
+
+.checkbox-item {
+  display: flex; /* Use flexbox to align checkbox and label horizontally */
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 0.5rem; /* Space between rows of checkboxes */
+  font-size: 0.8rem; /* Smaller font size for labels */
+  color: var(--text-color); /* Text color */
+  cursor: pointer; /* Pointer cursor for label */
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 0.5rem; /* Space between checkbox and label */
+  width: 16px; /* Adjust width for smaller checkbox */
+  height: 16px; /* Adjust height for smaller checkbox */
+  accent-color: var(--primary-color); /* Accent color for modern browsers */
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+  background-color: var(--primary-color); /* Background color when checked */
+  border-color: var(--primary-color); /* Border color when checked */
+}
+
+.option-label {
+  margin-left: 0.3rem; /* Space between checkbox and label text */
+  font-weight: normal; /* Set font-weight to normal to prevent bolding */
+}
+
+/* Adjust the size of the filter labels */
+.filter-label {
+  font-size: 0.9rem; /* Adjust this size as needed */
+  font-weight: bold; /* Bold the labels if desired */
+  margin-bottom: 0rem; /* Add some space below the label */
+
+  color: var(--text-color); /* Primary color for labels */
+}
+
+.text-input-container {
+  padding: 0.5rem; /* Even padding on all sides */
+  max-width: 50%; /* Ensure container doesn't exceed 100% width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.text-input {
+  width: 100%; /* Make input fill the container width */
+  padding: 0.5rem; /* Add padding inside the input for better UX */
+  font-size: 0.8rem; /* Set font size */
+  border: 1px solid var(--secondary-color); /* Add border with primary color */
+  border-radius: 4px; /* Add slight rounding to corners */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  color: var(--text-color); /* Use text color variable */
+  background-color: var(--background-color); /* Match background to container */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease; /* Smooth transition for border */
+}
+
+.text-input:focus {
+  border-color: var(--primary-color); /* Highlight border on focus */
+}
+.range-input-container {
+  margin-top: 10px;
+  display: flex;
+  gap: 1rem;
+  max-width: 50%; 
+  
+}
+
+.range-input-container label {
+  flex: 1;
+  font-size: 0.rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+
+}
+
+.range-input {
+  
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.range-label-text {
+  font-size: 0.8rem; /* Smaller text size */
+  font-weight: normal; /* Make text not bold */
+  margin-right: 3px; /* Space between label and input */
+}
+/* Styles for the overlay and message */
+.filter-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text-color); /* Change this to the desired text color */
+  font-size: 1rem;
+  z-index: 10; /* Ensure it appears above other content */
+}
+.filter-overlay-text {
+  color: #000000; /* Dark text color for contrast */
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Dark shadow for better visibility */
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent background behind text */
+}
+.filter-container {
+  position: relative;
+}

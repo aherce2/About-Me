@@ -1,0 +1,71 @@
+/* dropdownmen.css */
+.dropdown-container {
+    position: relative; /* Relative positioning for proper dropdown placement */
+    display: inline-block; /* Allows for dynamic width based on content */
+    margin-left: 15px;
+    
+  }
+
+   .dropdown-toggle {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white; /* Use text color that contrasts with the background */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: white 0.3s ease, color 0.3s ease; /* Smooth transition */
+    font-size: 1rem; /* Font size */
+  }
+  
+   .dropdown-toggle:hover,
+   .dropdown-toggle:focus {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+  .dropdown-toggle:active {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-color); /* Keep text color contrasting */
+  }
+   .dropdown-menu {
+    background-color: var(--secondary-color);
+  }
+  
+   .list-group-item {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+  }
+  
+   .list-group-item.active {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+  
+   .dropdown-item {
+    color: var(--text-color);
+  }
+  
+   .dropdown-item:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+  }
+  
+
+.dropdown-menu {
+  background-color: var(--secondary-color);
+}
+  .dropdown-menu {
+    min-width: auto; /* Adjust width based on content */
+    white-space: nowrap; /* Prevents text wrapping inside dropdown */
+    padding: 0; /* Adjust padding as needed */
+    position: absolute; /* Absolute positioning to align dropdown menu */
+    top: 100%; /* Position dropdown below the toggle */
+    left: 0; /* Align with the start of the container */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+    background-color: white;
+  }
+  
+  .dropdown-menu .dropdown-item {
+    white-space: nowrap; /* Prevents text wrapping in dropdown items */
+    
+  }

@@ -1,0 +1,28 @@
+follow the google_auth_credentials.txt steps
+
+cd server 
+pip install -r requirements.txt
+(create venv)
+to run python sever on windows: python main.py 
+you should get this output:
+
+ * Serving Flask app 'main'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 924-286-986
+
+ to exit out CTRL C. When you make changes on the front end it will show on the terminal
+
+open a second terminal
+cd client
+npm run dev
+click the link to view the website
+
+right click on the website and press inspect on the bottom
+go to console -> see the console.log output and any errors
+
+Follow the steps in this video to start a python virtual environment: https://www.youtube.com/watch?v=ctQMqqEo4G8 if something is wrong

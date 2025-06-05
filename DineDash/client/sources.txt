@@ -1,0 +1,23 @@
+code sources:
+
+React login & Sign up Form UI with bootstrap
+https://bootcamp.uxdesign.cc/build-react-login-sign-up-form-ui-with-bootstrap-5-7288c8ca15b7 
+https://react-bootstrap.netlify.app/docs/forms/overview/ 
+
+dropdown checkbox:
+
+https://codesandbox.io/s/react-bootstrapp-checkbox-dropdown-entcq?file=/src/App.js 
+https://codesandbox.io/s/filter-with-dropdown-react-bootstrap-y3vbc?file=/src/App.js:34-110 
+
+Range bar:
+https://codesandbox.io/s/filter-with-dropdown-react-bootstrap-y3vbc?file=/src/App.js:34-110 
+https://dev.to/sandra_lewis/building-a-multi-range-slider-in-react-from-scratch-4dl1 
+https://www.youtube.com/watch?v=lhNA_cmOG4Y 
+
+Handle multi-input w/React hooks
+https://learnwithaditya.hashnode.dev/handling-multiple-inputs-using-react-hooks-in-react-native 
+handling multiple inputs using Hooks
+https://learnwithaditya.hashnode.dev/handling-multiple-inputs-using-react-hooks-in-react-native 
+
+useRef() vs useState()
+https://dev.to/trinityyi/when-to-use-useref-instead-of-usestate-3h4o 
