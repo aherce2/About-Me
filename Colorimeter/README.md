@@ -58,7 +58,11 @@ As a woman who’s personally struggled with finding the right **makeup shade**,
 
 Although this course project concluded with a working hardware prototype, I’m **continuing development independently**\! I’m currently building an **app-based version of the skin tone algorithm** that can help users match makeup shades directly from their phone or tablet—**no extra hardware needed**.
 
+**Kaggle Link:** https://www.kaggle.com/datasets/ashleyher/complexion-makeup-products-and-shade-information/data 
+ 
 I’m excited about where this could go and hope to share updates soon\!
+
+
 
 ---
 
